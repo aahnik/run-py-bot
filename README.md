@@ -45,10 +45,9 @@ The following instructions will work smoothly on *Linux* and *Mac*. If you are o
   
       git clone https://github.com/aahnik/run-py-bot.git
 
-
 - Now add the token in the first line of `token.txt`.Run `cat > token.txt` -> Paste the token -> Press `Ctrl+D`
 
-- Create a virtual environment and install dependancies.
+- Create a virtual environment and install dependencies.
 
       python3.8 -m venv venv
       source venv/bin/activate
@@ -60,7 +59,7 @@ The following instructions will work smoothly on *Linux* and *Mac*. If you are o
 
 Your bot is now up and running, Enjoy ! 😊
 
-All the logs will have the timestamp of time-zone specified in the `start.py` file.
+All the logs will have the timestamp in the time-zone specified in the `start.py` file.
 
 To stop the bot, Press `Ctrl+C`.
 <!-- once to stop scheduler and once to stop make -->
@@ -83,7 +82,7 @@ You may overcome these limitations by changing the `config.py` file in the `bot`
 
 Authored by **Aahnik Daw**.
 
-You may connect with me by clicking on any of the icons below !
+<!-- You may connect with me by clicking on any of the icons below !
 
 <a href = "https://medium.com/@aahnikdaw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/medium.png?raw=true" alt = "medium" > </a >
 <a href = "https://www.facebook.com/aahnik.daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/facebook.png?raw=true" alt = "facebook" > </a >
@@ -93,4 +92,4 @@ You may connect with me by clicking on any of the icons below !
 <a href = "https://www.quora.com/profile/Aahnik-Daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/quora.png?raw=true" alt = "quora" > </a >
 <a href = "https://www.youtube.com/channel/UCcEbN0d8iLTB6ZWBE_IDugg" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/youtube.png?raw=true" alt = "youtube" > </a >
 <a href = "https://stackoverflow.com/users/13523305/aahnik-daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/stackOverflow.png?raw=true" alt = "stackOverflow" > </a >
-<a href = "https://dev.to/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/dev.png?raw=true" alt = "dev" > </a >
+<a href = "https://dev.to/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/dev.png?raw=true" alt = "dev" > </a > -->
