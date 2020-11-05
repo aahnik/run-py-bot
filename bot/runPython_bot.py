@@ -1,7 +1,7 @@
 '''
 I'm the *Python Runner* bot 😀 
 
-I have been created by @AahnikDaw and you may see my [source code](http://bit.ly/python-run) on GitHub.
+I have been created by @AahnikDaw and you may see my [source code](https://github.com/aahnik/run-py-bot) on GitHub.
 
 I am currently *alive and kicking* on a free tier server of Python Anywhere.
 
