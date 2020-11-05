@@ -60,6 +60,8 @@ The following instructions will work smoothly on *Linux* and *Mac*. If you are o
 
 Your bot is now up and running, Enjoy ! 😊
 
+All the logs will have the timestamp of time-zone specified in the `start.py` file.
+
 To stop the bot, Press `Ctrl+C`.
 <!-- once to stop scheduler and once to stop make -->
 
