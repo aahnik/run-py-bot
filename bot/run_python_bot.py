@@ -26,21 +26,21 @@ with open('docs/code.txt') as f:
 
 
 def handle_long_message(msg):
-    '''Telegram does not support messages over 4096 characters. This handler handles all messages above 2000 characters
+    '''Telegram does not support messages over 4096 characters.
+    This handler handles all messages above 2000 characters
     '''
 
     if msg:
         if len(msg) > 2000:
             return msg[:2000]+'\n\n 😟 Output was too long, truncated to 2000 characters'
-        else:
-            return msg
+        return msg
     return 'handle_long_message recieved an empty message'
 
 
 def bot():
     '''
     Running this function runs the bot
-    You may learn more from this tutorial 
+    You may learn more from this tutorial
     https://github.com/python-telegram-bot/python-telegram-bot/wiki/Extensions-%E2%80%93-Your-first-Bot
     '''
 
@@ -53,9 +53,10 @@ def bot():
 
         context.bot.send_message(
             chat_id=update.effective_chat.id, text=start_text, parse_mode='Markdown')
-        # for more info on parse modes see https://python-telegram-bot.readthedocs.io/en/stable/telegram.parsemode.html
+        # for more info on parse modes
+        # see https://python-telegram-bot.readthedocs.io/en/stable/telegram.parsemode.html
 
-    def help(update, context):
+    def bot_help(update, context):
         '''This function replies to the help command'''
         context.bot.send_message(
             chat_id=update.effective_chat.id, text=help_text, parse_mode='Markdown')
@@ -67,10 +68,16 @@ def bot():
 
     def reply_execute(update, context):
         '''
-        This function replies to any non-command messages
+        This function replies to any non-command messages.
         '''
         input_text = str(update.message.text)
         # allowing usage of /e at the end of expressions
+
+        if input_text == 'hi':
+            user = update.message.from_user
+            context.bot.send_message(chat_id=update.effective_chat.id,
+                                     text=f'Hi! {user["username"]} 🥰')
+
         if input_text.endswith('/e'):
             message = handle_long_message(eval_py(input_text.strip('/e')))
             update.message.reply_text(message, quote=True)
@@ -78,7 +85,10 @@ def bot():
             returned_val = run(update)
             if not returned_val:
                 update.message.reply_text(
-                    '*No output. No error.* \n\n > Try using a `print` statement. \n\n > To evaluate an expression use the /e command.', quote=True, parse_mode='Markdown')
+                    '''*No output. No error.*
+                    \n> Try using a `print` statement.
+                    \n > To evaluate an expression use the /e command.''',
+                    quote=True, parse_mode='Markdown')
             else:
                 message = handle_long_message(returned_val)
                 update.message.reply_text(message, quote=True)
@@ -94,12 +104,14 @@ def bot():
             update.message.reply_text(message, quote=True)
         else:
             update.message.reply_text(
-                '*No expression provided to eval*.\n\nUse command /e before or after your expression like \n\n/e `4 >= 5` \n \t or \n`4 >= 5` /e ', quote=True, parse_mode='Markdown')
+                '''*No expression provided to eval*.
+                \nUse command /e before or after your expression like
+                \n/e `4 >= 5` \n \t or \n`4 >= 5` /e ''', quote=True, parse_mode='Markdown')
 
     _handlers = {}
 
     _handlers['start_handler'] = CommandHandler('start', start)
-    _handlers['help_handler'] = CommandHandler('help', help)
+    _handlers['help_handler'] = CommandHandler('help', bot_help)
     _handlers['code_info_handler'] = CommandHandler('code', code_info)
     _handlers['message_handler'] = MessageHandler(
         Filters.text & (~Filters.command), reply_execute)
