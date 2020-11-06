@@ -12,7 +12,7 @@ Run python code from your telegram chat !
 
 ## Find on Telegram
 
-You can find this bot on Telegram: click on this [link](https://t.me/runPython_bot) or search `@runPython_bot` on telegram. The spelling is case sensitive.
+You can find this bot on Telegram as [@runPython_bot](https://telegram.me/runPython_bot).
 
 This bot is deployed on [Python Anywhere](https://www.pythonanywhere.com/) free Beginner Account.
 You may check whether the bot is alive or not, by clicking on the start command. If the bot responds, it is alive.
