@@ -1,0 +1,13 @@
+*Every message is executed freshly as python code*. Suppose you define a variable in one message, you won't be able to access it in the next message.
+
+But you can write _multiline code in one message_
+->Tab is 4 spaces
+-> Newline is a newline in the same message body
+
+To evaluate a pythonic expression, use /e `4 >= 5`
+
+If I am being used by too many people, there may be a delay in response as I am deployed on a free tier server.
+
+Note: 😁 Sometimes I behave quite differently from a regular python interactive shell. Certain things are not allowed to prevent horrible consequences.
+
+To get source code send /code.
