@@ -10,14 +10,14 @@ Run python code from your telegram chat!
 
 <!-- A simple bot that runs python code. Free and Open Source. For more info visit http://bit.ly/runPython -->
 
-## 🕵️ Find on Telegram
+## 👀 Find on Telegram
 
 You can find this bot on Telegram as [@runPython_bot](https://telegram.me/runPython_bot).
 
 This bot is deployed on [Python Anywhere](https://www.pythonanywhere.com/) free Beginner Account.
 You may check whether the bot is alive or not, by clicking on the start command. If the bot responds, it is alive.
 
-## 💬 Example Use
+## 🔀 Example Use
 
 You may use pythonic expressions to easily calculate any complex problem. Or you may test your algorithms on the go.
 
