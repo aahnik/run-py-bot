@@ -73,7 +73,6 @@ For security and performance reasons, you **cannot** do the following with the b
 - import any package
 - run the `input()` function
 - run the `open()` function
-- do exponentiation `**`
 - Execute a piece of code which takes longer than *6 seconds* to execute.
 
 You may overcome these limitations by changing the `config.py` file in the `bot` subdirectory and running the bot on your own server.
