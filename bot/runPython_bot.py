@@ -26,6 +26,9 @@ with open('info/code.txt') as f:
 
 
 def handle_long_message(msg):
+    '''Telegram does not support messages over 4096 characters. This handler handles all messages above 2000 characters
+    '''
+
     if msg:
         if len(msg) > 2000:
             return msg[:2000]+'\n\n 😟 Output was too long, truncated to 2000 characters'
@@ -46,19 +49,19 @@ def bot():
     dispatcher = updater.dispatcher
 
     def start(update, context):
-        '''
-        This fuction replies to the start command
-        '''
+        '''This fuction replies to the start command'''
 
         context.bot.send_message(
             chat_id=update.effective_chat.id, text=start_text, parse_mode='Markdown')
         # for more info on parse modes see https://python-telegram-bot.readthedocs.io/en/stable/telegram.parsemode.html
 
     def help(update, context):
+        '''This function replies to the help command'''
         context.bot.send_message(
             chat_id=update.effective_chat.id, text=help_text, parse_mode='Markdown')
 
     def code_info(update, context):
+        '''This function replies to the code command.'''
         context.bot.send_message(
             chat_id=update.effective_chat.id, text=code_text, parse_mode='Markdown')
 
@@ -67,6 +70,7 @@ def bot():
         This function replies to any non-command messages
         '''
         input_text = str(update.message.text)
+        # allowing usage of /e at the end of expressions
         if input_text.endswith('/e'):
             message = handle_long_message(eval_py(input_text.strip('/e')))
             update.message.reply_text(message, quote=True)
@@ -80,6 +84,7 @@ def bot():
                 update.message.reply_text(message, quote=True)
 
     def reply_eval(update, context):
+        ''' This function handles the /e command'''
         if context.args:
             input_text = ''
             for string in context.args:
@@ -89,7 +94,7 @@ def bot():
             update.message.reply_text(message, quote=True)
         else:
             update.message.reply_text(
-                '*No expression provided to eval*. \n\nUsage Example: \n\n/e `4 >= 5` \n \t or \n `4 >= 5` /e ', quote=True, parse_mode='Markdown')
+                '*No expression provided to eval*.\n\nUse command /e before or after your expression like \n\n/e `4 >= 5` \n \t or \n`4 >= 5` /e ', quote=True, parse_mode='Markdown')
 
     _handlers = {}
 

@@ -4,9 +4,16 @@ This module is responsible for handling the execution of python code given by th
 import logging
 from subprocess import TimeoutExpired
 import subprocess
-from .config import banned, timeout, timeout_message
+from .config import banned, timeout, timeout_message, restricted_message
 import multiprocessing
-import time
+
+
+def contains_restricted(input_text):
+    '''returns true if any restricted word is found'''
+    if any(word in input_text for word in banned):
+        # block usage of this words for security and performance issues
+        return True
+    return False
 
 
 def run(update) -> str:
@@ -37,15 +44,13 @@ def run(update) -> str:
         finally:
             proc.kill()
 
-    def func(input_text):
+    def func(input_text: str):
         '''
         This function is a helper function which does some validation job before passing the code to execute_py.
         '''
 
-        if any(word in input_text for word in banned):
-            # block usage of this words for security and performance issues
-            out = f'☹️ SECURITY ISSUE: You have used a restricted word \n {banned}'
-            return out
+        if contains_restricted(input_text):
+            return restricted_message
         stdout, stderr = execute_py(input_text)
         if str(stdout) or str(stderr):
             out = f'{stdout} \n{stderr}'
@@ -66,21 +71,31 @@ def run(update) -> str:
 
 
 def eval_py(input_text: str):
+    ''' Runs eval() on the input text on a seperate process and returns output or error.
+    How to timout on a function call ? https://stackoverflow.com/a/14924210/13523305
+    Return a value from multiprocess ? https://stackoverflow.com/a/10415215/13523305
+    '''
 
     def evaluate(input_text, return_val):
+        '''wrapper for eval'''
         try:
             return_val[input_text] = str(eval(input_text))
         except Exception as e:
             return_val[
                 input_text] = f'''😔 /e feeds your expression to python's eval function, and the following error occured: \n\n{e}'''
 
+    if contains_restricted(input_text):
+        return restricted_message
+
+    # using multiprocessing and getting value returned by target function
     m = multiprocessing.Manager()
-    return_val = m.dict()
+    return_val = m.dict()  # enable target function to return a value
 
     p = multiprocessing.Process(target=evaluate, args=(input_text, return_val))
     p.start()
-    p.join(6)
+    p.join(6)  # allow the process to run for 6 seconds
     if p.is_alive():
+        # kill the process if it is still alive
         p.kill()
         return timeout_message
     else:
