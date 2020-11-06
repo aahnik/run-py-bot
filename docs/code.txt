@@ -1,4 +1,4 @@
-This bot has been built by @AahnikDaw and you can find the source code on GitHub at.
+This bot has been built by @AahnikDaw and you can find the source code on GitHub at the link given below.
 
 Language: Python
 Uses: Telegram Bot API via python-telegram-bot wrapper
