@@ -37,7 +37,8 @@ If you are planning to deploy on your **own machine**, make sure to have `Python
 
 The following instructions will work smoothly on *Linux* and *Mac*. If you are on Windows, you may have to make slight modifications. Google is your best friend here.
 
-- Clone this repository and move into it
+- Clone this repository and move into it.
+
       git clone https://github.com/aahnik/run-py-bot.git && cd run-py-bot
 
 - Now add the token in the first line of `token.txt`.Run `cat > token.txt` -> Paste the token -> Press `Ctrl+D`
