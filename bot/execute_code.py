@@ -1,9 +1,13 @@
 '''
 This module is responsible for handling the execution of python code given by the telegram user.
 '''
+import logging
 from subprocess import TimeoutExpired
 import subprocess
-from .config import banned, timeout
+from .config import banned, timeout, timeout_message
+import multiprocessing
+import time
+
 
 def run(update) -> str:
     '''
@@ -25,9 +29,13 @@ def run(update) -> str:
                                 stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         try:
             stdout, stderr = proc.communicate(timeout=timeout)
+            return stdout.decode('utf-8'), stderr.decode('utf-8')
         except TimeoutExpired:
-            return '', f'😢 Timeout is {timeout} seconds. I have limited resources. \nYou may increase the timeout and run this bot on your own server if required\n'
-        return stdout.decode('utf-8'), stderr.decode('utf-8')
+            return '', timeout_message
+        except Exception as e:
+            return '', f'Problem occured \n{e}'
+        finally:
+            proc.kill()
 
     def func(input_text):
         '''
@@ -43,14 +51,40 @@ def run(update) -> str:
             out = f'{stdout} \n{stderr}'
             return out
         return None
+    try:
+        if update.message.text:
+            input_text = update.message.text
 
-    input_text = update.message.text
-    out = func(input_text)
-    if not out:
+            out = func(input_text)
+            if not out:
+                return 'No output. No error \n > Try wrapping your expression with a `print` statement \n > Try writing your expression followed by /e command, which will feed your expression to the eval function of python'
+            return out
+        else:
+            return 'update.message.text was None'
+    except Exception as e:
+        msg = 'Error in handling update.message.text'
+        logging.log(level=40, msg=msg)
+        return msg
+
+
+def eval_py(input_text: str):
+
+    def evaluate(input_text, return_val):
         try:
-            out = str(eval(input_text))
-            # if there is no output, it may be due to the fact that the code does not have print and is a python expression.
-            # so the bot evaluates it using eval()
+            return_val[input_text] = str(eval(input_text))
         except Exception as e:
-            out = f'''😔 If you are planning to write lines after this line then try writing them in a single message. \n\nTo print something, try using print function\n\n Executing your code gave no stdout or stderr. \nSo I tried to evaluate it by using eval(). That raised the following error \n {e}'''
-    return out
+            return_val[
+                input_text] = f'''😔 /e feeds your expression to python's eval function, and the following error occured: \n\n{e}'''
+
+    m = multiprocessing.Manager()
+    return_val = m.dict()
+
+    p = multiprocessing.Process(target=evaluate, args=(input_text, return_val))
+    p.start()
+    p.join(6)
+    if p.is_alive():
+        p.kill()
+        return timeout_message
+    else:
+        output = return_val[input_text]
+        return output
