@@ -56,8 +56,7 @@ Your bot is now up and running, Enjoy ! 😊
 
 All the logs will have the timestamp in the time-zone specified in the `start.py` file.
 
-To stop the bot, Press `Ctrl+C`.
-<!-- once to stop scheduler and once to stop make -->
+To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
 
 ## Limitations
 
