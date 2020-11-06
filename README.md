@@ -10,14 +10,14 @@ Run python code from your telegram chat!
 
 <!-- A simple bot that runs python code. Free and Open Source. For more info visit http://bit.ly/runPython -->
 
-## Find on Telegram
+## 🕵️ Find on Telegram
 
 You can find this bot on Telegram as [@runPython_bot](https://telegram.me/runPython_bot).
 
 This bot is deployed on [Python Anywhere](https://www.pythonanywhere.com/) free Beginner Account.
 You may check whether the bot is alive or not, by clicking on the start command. If the bot responds, it is alive.
 
-## Example Use
+## 💬 Example Use
 
 You may use pythonic expressions to easily calculate any complex problem. Or you may test your algorithms on the go.
 
@@ -25,7 +25,7 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 ![runPython_bot](https://github.com/aahnik/run-py-bot/blob/main/docs/images/runPython_bot_gif.gif?raw=true)
 
-## Deploy
+## ⚡ Deploy
 
 You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following the below steps:
 
@@ -58,7 +58,7 @@ All the logs will have the timestamp in the time-zone specified in the `start.py
 
 To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
 
-## Limitations
+## 😑 Limitations
 
 Currently, the bot is deployed on a Free Tier account of Python Anywhere.
 
@@ -71,7 +71,7 @@ For security and performance reasons, you **cannot** do the following with the b
 
 You may overcome these limitations by changing the `config.py` file in the `bot` subdirectory and running the bot on your own server.
 
-## The Shameless Plug
+## 🤗 The Shameless Plug
 
 Authored by **Aahnik Daw**.
 
