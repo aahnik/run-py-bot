@@ -26,10 +26,12 @@ with open('info/code.txt') as f:
 
 
 def handle_long_message(msg):
-    if len(msg) > 2000:
-        return msg[:2000]+'\n\n 😟 Output was too long, truncated to 2000 characters'
-    else:
-        return msg
+    if msg:
+        if len(msg) > 2000:
+            return msg[:2000]+'\n\n 😟 Output was too long, truncated to 2000 characters'
+        else:
+            return msg
+    return 'handle_long_message recieved an empty message'
 
 
 def bot():
@@ -64,10 +66,18 @@ def bot():
         '''
         This function replies to any non-command messages
         '''
-
-        returned_val = run(update)
-        message = handle_long_message(returned_val)
-        update.message.reply_text(message, quote=True)
+        input_text = str(update.message.text)
+        if input_text.endswith('/e'):
+            message = handle_long_message(eval_py(input_text.strip('/e')))
+            update.message.reply_text(message, quote=True)
+        else:
+            returned_val = run(update)
+            if not returned_val:
+                update.message.reply_text(
+                    '*No output. No error.* \n\n > Try using a `print` statement. \n\n > To evaluate an expression use the /e command.', quote=True, parse_mode='Markdown')
+            else:
+                message = handle_long_message(returned_val)
+                update.message.reply_text(message, quote=True)
 
     def reply_eval(update, context):
         if context.args:
@@ -79,7 +89,7 @@ def bot():
             update.message.reply_text(message, quote=True)
         else:
             update.message.reply_text(
-                'No expression provided to eval. \nUsage Example: \n/e `4 >= 5`', quote=True, parse_mode='Markdown')
+                '*No expression provided to eval*. \n\nUsage Example: \n\n/e `4 >= 5` \n \t or \n `4 >= 5` /e ', quote=True, parse_mode='Markdown')
 
     _handlers = {}
 
