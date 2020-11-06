@@ -23,7 +23,7 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 > If you are viewing from a smartphone, click on the gif to view full screen ...
 
-![runPython_bot](https://user-images.githubusercontent.com/66209958/97753037-1e383880-1b1b-11eb-863e-bcf82006820b.gif)
+![runPython_bot](https://github.com/aahnik/run-py-bot/blob/main/docs/images/runPython_bot_gif.gif?raw=true)
 
 ## Deploy
 
