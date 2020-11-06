@@ -15,13 +15,13 @@ from .execute_code import eval_py, run
 with open('token.txt') as f:
     tok = f.readline().strip()
 
-with open('info/start.txt') as f:
+with open('docs/start.txt') as f:
     start_text = f.read()
 
-with open('info/help.txt') as f:
+with open('docs/help.txt') as f:
     help_text = f.read()
 
-with open('info/code.txt') as f:
+with open('docs/code.txt') as f:
     code_text = f.read()
 
 
