@@ -71,9 +71,9 @@ For security and performance reasons, you **cannot** do the following with the b
 
 You may overcome these limitations by changing the `config.py` file in the `bot` subdirectory and running the bot on your own server.
 
-## 🤗 The Shameless Plug
+<!-- ## 🤗 The Shameless Plug
 
-Authored by **Aahnik Daw**.
+Authored by **Aahnik Daw**. -->
 
 <!-- You may connect with me by clicking on any of the icons below !
 
