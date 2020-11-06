@@ -57,7 +57,7 @@ def run(update) -> str:
 
             out = func(input_text)
             if not out:
-                return 'No output. No error \n > Try wrapping your expression with a `print` statement \n > Try writing your expression followed by /e command, which will feed your expression to the eval function of python'
+                return 'No output. No error. \n\n > Try wrapping your expression with a `print` statement \n > Try writing your expression followed by /e command, which will feed your expression to the eval function of python'
             return out
         else:
             return 'update.message.text was None'
