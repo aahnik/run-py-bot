@@ -5,6 +5,8 @@ Run python code from your telegram chat!
 [![GitHub license](https://img.shields.io/github/license/aahnik/lovely-telegram)](https://github.com/aahnik/run-py-bot/blob/main/LICENSE)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Maintenance Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/aahnik/REPO/graphs/commit-activity)
+[![telegram-chat](https://img.shields.io/badge/chat-@aahnikdaw-blue?logo=telegram)](https://telegram.me/aahnikdaw)
+[![telegram-bot](https://img.shields.io/badge/bot-@runPython_bot-orange?logo=telegram)](https://telegram.me/runPython_bot)
 
 ![RunPythonBot](https://github.com/aahnik/run-py-bot/blob/main/docs/images/runPython_bot.png?raw=true)
 
