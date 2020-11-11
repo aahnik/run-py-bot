@@ -78,7 +78,7 @@ You may overcome these limitations by changing the `config.py` file in the `bot`
 
 ## The Shameless Plug 🤗 
 
-This project has been authored by **Aahnik Daw**.
+This project has been authored by me [**Aahnik Daw**](https://github.com/aahnik).
 
 You may connect with me by clicking on any of the icons below !
 
@@ -90,7 +90,6 @@ You may connect with me by clicking on any of the icons below !
 <a href = "https://stackoverflow.com/users/13523305/aahnik-daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/stackoverflow.svg?raw=true" alt = "stackoverflow" width=35> </a>
 <a href = "https://telegram.me/AahnikD" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/telegram.svg?raw=true" alt = "telegram" width=35> </a>
 <a href = "https://www.youtube.com/channel/UCcEbN0d8iLTB6ZWBE_IDugg" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/youtube.svg?raw=true" alt = "youtube" width=35> </a>
-<a href = "https://github.com/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/github.svg?raw=true" alt = "github" width=35> </a>
 
 
 ## Contributors ✨
