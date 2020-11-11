@@ -1,4 +1,7 @@
 # run-py-bot
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Run python code from your telegram chat!
 
@@ -88,3 +91,22 @@ Authored by **Aahnik Daw**. -->
 <a href = "https://www.youtube.com/channel/UCcEbN0d8iLTB6ZWBE_IDugg" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/youtube.png?raw=true" alt = "youtube" > </a >
 <a href = "https://stackoverflow.com/users/13523305/aahnik-daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/stackOverflow.png?raw=true" alt = "stackOverflow" > </a >
 <a href = "https://dev.to/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/dev.png?raw=true" alt = "dev" > </a > -->
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/gabrielesilinic"><img src="https://avatars0.githubusercontent.com/u/51238829?v=4" width="100px;" alt=""/><br /><sub><b>gabrielesilinic</b></sub></a><br /><a href="#security-gabrielesilinic" title="Security">🛡️</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
