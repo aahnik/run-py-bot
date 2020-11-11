@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "gabrielesilinic",
+      "name": "gabrielesilinic",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/51238829?v=4",
+      "profile": "https://github.com/gabrielesilinic",
+      "contributions": [
+        "security"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "run-py-bot",
+  "projectOwner": "aahnik",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
