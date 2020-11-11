@@ -15,14 +15,14 @@ Run python code from your telegram chat!
 
 <!-- A simple bot that runs python code. Free and Open Source. For more info visit http://bit.ly/runPython -->
 
-## 👀 Find on Telegram
+## Find on Telegram 🔎
 
 You can find this bot on Telegram as [@runPython_bot](https://telegram.me/runPython_bot).
 
 This bot is deployed on [Python Anywhere](https://www.pythonanywhere.com/) free Beginner Account.
 You may check whether the bot is alive or not, by clicking on the start command. If the bot responds, it is alive.
 
-## 🔀 Example Use
+## Example Use 🔀
 
 You may use pythonic expressions to easily calculate any complex problem. Or you may test your algorithms on the go.
 
@@ -30,7 +30,7 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 ![runPython_bot](https://github.com/aahnik/run-py-bot/blob/main/docs/images/runPython_bot_gif.gif?raw=true)
 
-## ⚡ Deploy
+## Deploy ⚡
 
 You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following the below steps:
 
@@ -63,7 +63,7 @@ All the logs will have the timestamp in the time-zone specified in the `start.py
 
 To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
 
-## 😑 Limitations
+## Limitations 😑
 
 Currently, the bot is deployed on a Free Tier account of Python Anywhere.
 
@@ -76,21 +76,22 @@ For security and performance reasons, you **cannot** do the following with the b
 
 You may overcome these limitations by changing the `config.py` file in the `bot` subdirectory and running the bot on your own server.
 
-<!-- ## 🤗 The Shameless Plug
+## The Shameless Plug 🤗 
 
-Authored by **Aahnik Daw**. -->
+This project has been authored by **Aahnik Daw**.
 
-<!-- You may connect with me by clicking on any of the icons below !
+You may connect with me by clicking on any of the icons below !
 
-<a href = "https://medium.com/@aahnikdaw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/medium.png?raw=true" alt = "medium" > </a >
-<a href = "https://www.facebook.com/aahnik.daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/facebook.png?raw=true" alt = "facebook" > </a >
-<a href = "https://www.linkedin.com/in/aahnik-daw-067a011b3/" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/linkedin.png?raw=true" alt = "linkedin" > </a >
-<a href = "https://t.me/AahniKDaw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/telegram.png?raw=true" alt = "telegram" > </a >
-<a href = "https://twitter.com/AahnikD" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/twitter.png?raw=true" alt = "twitter" > </a >
-<a href = "https://www.quora.com/profile/Aahnik-Daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/quora.png?raw=true" alt = "quora" > </a >
-<a href = "https://www.youtube.com/channel/UCcEbN0d8iLTB6ZWBE_IDugg" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/youtube.png?raw=true" alt = "youtube" > </a >
-<a href = "https://stackoverflow.com/users/13523305/aahnik-daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/stackOverflow.png?raw=true" alt = "stackOverflow" > </a >
-<a href = "https://dev.to/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/social_media_logos/dev.png?raw=true" alt = "dev" > </a > -->
+<a href = "https://twitter.com/AahnikD" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/twitter.svg?raw=true" alt = "twitter" width=35> </a>
+<a href = "https://medium.com/@aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/medium.svg?raw=true" alt = "medium" width=35> </a>
+<a href = "https://www.facebook.com/aahnik.daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/facebook.svg?raw=true" alt = "facebook" width=35> </a>
+<a href = "https://www.linkedin.com/in/aahnik-daw-067a011b3/" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/linkedin.svg?raw=true" alt = "linkedin" width=35> </a>
+<a href = "https://dev.to/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/dev_to.svg?raw=true" alt = "dev_to" width=35> </a>
+<a href = "https://stackoverflow.com/users/13523305/aahnik-daw" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/stackoverflow.svg?raw=true" alt = "stackoverflow" width=35> </a>
+<a href = "https://telegram.me/AahnikD" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/telegram.svg?raw=true" alt = "telegram" width=35> </a>
+<a href = "https://www.youtube.com/channel/UCcEbN0d8iLTB6ZWBE_IDugg" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/youtube.svg?raw=true" alt = "youtube" width=35> </a>
+<a href = "https://github.com/aahnik" > <img src = "https://github.com/aahnik/aahnik/blob/master/svg_assets/github.svg?raw=true" alt = "github" width=35> </a>
+
 
 ## Contributors ✨
 
