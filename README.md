@@ -115,4 +115,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-Contributions of any kind welcome! Please read [Contributing Guidelines](https://github.com/aahnik/run-py-bot/blob/main/.github/CONTRIBUTING.md#contributing-guidelines) to get started.
+Contributions of any kind welcome! Please read [Contributing Guidelines](https://github.com/aahnik/run-py-bot/blob/main/.github/CONTRIBUTING.md) to get started.
