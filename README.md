@@ -26,7 +26,7 @@ You may check whether the bot is alive or not, by clicking on the start command.
 
 1. Tweet by [Dev Community](https://twitter.com/ThePracticalDev/status/1325386583537803264)
 2. Tweet by [The Python Dev](https://twitter.com/The_Python_DEV/status/1325237102058016768)
-3. Dor Moshe's Newsletter [Python Trends #7 ](https://dormoshe.io/newsletters/ag/python/7?utm_source=twitter&utm_campaign=twitter) 
+3. Dor Moshe's [Newsletter](https://dormoshe.io/newsletters/ag/python/7?utm_source=twitter&utm_campaign=twitter) 
 
 ## Example Use 🔀
 
