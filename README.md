@@ -22,6 +22,12 @@ You can find this bot on Telegram as [@runPython_bot](https://telegram.me/runPyt
 This bot is deployed on [Python Anywhere](https://www.pythonanywhere.com/) free Beginner Account.
 You may check whether the bot is alive or not, by clicking on the start command. If the bot responds, it is alive.
 
+## Featured in 😍
+
+1. Tweet by [Dev Community](https://twitter.com/ThePracticalDev/status/1325386583537803264)
+2. Tweet by [The Python Dev](https://twitter.com/The_Python_DEV/status/1325237102058016768)
+3. Dor Moshe's Newsletter [Python Trends #7 ](https://dormoshe.io/newsletters/ag/python/7?utm_source=twitter&utm_campaign=twitter) 
+
 ## Example Use 🔀
 
 You may use pythonic expressions to easily calculate any complex problem. Or you may test your algorithms on the go.
