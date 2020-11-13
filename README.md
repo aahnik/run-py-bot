@@ -86,7 +86,7 @@ You may overcome these limitations by changing the `config.py` file in the `bot`
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Emojis assigned to each person, shows the type of contribution made by that person. See [emoji key](https://allcontributors.org/docs/en/emoji-key) to know more.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
