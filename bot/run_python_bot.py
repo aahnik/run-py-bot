@@ -145,6 +145,10 @@ def bot():
         # https://rushter.com/blog/python-strings-and-memory:~:text=4%20bytes%20per%20char%20(UCS%2D4%20encoding)
         context.bot.answer_inline_query(update.inline_query.id, results)
 
+    def unknown(update, context):
+        update.message.reply_text(
+            text='Sorry, 😥 I did not understand that command. Press `/` to see the list of availaible commands.', quote=True)
+
     def error_callback(update, context):
         try:
             raise context.error
@@ -160,6 +164,7 @@ def bot():
         Filters.text & (~Filters.command), reply_execute)
     _handlers['eval_handler'] = CommandHandler('e', reply_eval)
     _handlers['inline_eval_handler'] = InlineQueryHandler(inline_eval)
+    _handlers['unknown_handler'] = MessageHandler(Filters.command, unknown)
 
     for name, _handler in _handlers.items():
         print(f'Adding {name}')
