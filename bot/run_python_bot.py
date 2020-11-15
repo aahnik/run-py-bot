@@ -1,9 +1,19 @@
 '''
 This module makes the bot actually run
 '''
-import random
 
-from telegram.ext import CommandHandler, MessageHandler, Filters, Updater, InlineQueryHandler
+import logging
+from telegram.ext import (CommandHandler,
+                          MessageHandler,
+                          Filters,
+                          Updater,
+                          InlineQueryHandler)
+from telegram.error import (TelegramError,
+                            Unauthorized,
+                            BadRequest,
+                            TimedOut,
+                            ChatMigrated,
+                            NetworkError)
 from telegram import InlineQueryResultArticle, InputTextMessageContent
 # python-telegram-bot is a Pythonic Wrapper to the core Telegram API
 # it helps us to be DRY by giving us convinient wrapper functions to deal with Telegram API
@@ -135,6 +145,12 @@ def bot():
         # https://rushter.com/blog/python-strings-and-memory:~:text=4%20bytes%20per%20char%20(UCS%2D4%20encoding)
         context.bot.answer_inline_query(update.inline_query.id, results)
 
+    def error_callback(update, context):
+        try:
+            raise context.error
+        except Exception as err:
+            logging.warning(err)
+
     _handlers = {}
 
     _handlers['start_handler'] = CommandHandler('start', start)
@@ -148,6 +164,8 @@ def bot():
     for name, _handler in _handlers.items():
         print(f'Adding {name}')
         dispatcher.add_handler(_handler)
+
+    dispatcher.add_error_handler(error_callback)
 
     updater.start_polling()
     updater.idle()
