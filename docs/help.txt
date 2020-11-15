@@ -6,7 +6,7 @@ But you can write _multiline code in one message_ 😊.
 
 To evaluate a pythonic expression, use the /e command.
 
-⚠️ Certain things like _importing packages_ is not allowed to prevent any horrible consequence.
+⚠️ Certain things like _importing packages_ are not allowed to prevent any horrible consequence.
 
 To get source code send /code.
 
