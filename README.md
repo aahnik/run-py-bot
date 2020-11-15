@@ -82,6 +82,9 @@ For security and performance reasons, you **cannot** do the following with the b
 
 You may overcome these limitations by changing the `config.py` file in the `bot` subdirectory and running the bot on your own server.
 
+## Changelog 🔖
+
+See the [Releases](https://github.com/aahnik/run-py-bot/releases) tab for more info.
 
 
 ## Contributors ✨
@@ -103,7 +106,6 @@ Emojis assigned to each person, shows the type of contribution made by that pers
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Contributions of any kind welcome! Please read [Contributing Guidelines](https://github.com/aahnik/run-py-bot/blob/main/.github/CONTRIBUTING.md) to get started.
-
 
 ## Social 😺
 
