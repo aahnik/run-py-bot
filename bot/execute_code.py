@@ -5,12 +5,12 @@ import logging
 from subprocess import TimeoutExpired
 import subprocess
 import multiprocessing
-from .config import banned, TIMEOUT, timeout_message, restricted_message
+from .config import BANNED, TIMEOUT, TIMEOUT_MESSAGE, RESTRICT_MESSAGE
 
 
 def contains_restricted(input_text):
     '''returns true if any restricted word is found'''
-    if any(word in input_text for word in banned):
+    if any(word in input_text for word in BANNED):
         # block usage of this words for security and performance issues
         return True
     return False
@@ -44,7 +44,7 @@ def run(update) -> str:
             stdout, stderr = proc.communicate(timeout=TIMEOUT)
             return stdout.decode('utf-8'), stderr.decode('utf-8')
         except TimeoutExpired:
-            return '', timeout_message
+            return '', TIMEOUT_MESSAGE
         except Exception as error:
             return '', f'Problem occured \n{error}'
         finally:
@@ -57,7 +57,7 @@ def run(update) -> str:
         '''
 
         if contains_restricted(input_text):
-            return restricted_message
+            return RESTRICT_MESSAGE
         stdout, stderr = execute_py(input_text)
         if str(stdout) or str(stderr):
             out = f'{stdout} \n{stderr}'
@@ -83,16 +83,15 @@ def eval_py(input_text: str):
     '''
 
     def evaluate(input_text, return_val):
-        '''wrapper for eval'''
+        '''wrapper for eval()'''
         try:
             return_val[input_text] = str(eval(input_text))
         except Exception as error:
             return_val[
-                input_text] = f'''😔 /e feeds your expression to python's eval function.
-                The following error occured: \n\n{error}'''
+                input_text] = str(error)
 
     if contains_restricted(input_text):
-        return restricted_message
+        return RESTRICT_MESSAGE
 
     # using multiprocessing and getting value returned by target function
     manger = multiprocessing.Manager()
@@ -105,6 +104,6 @@ def eval_py(input_text: str):
     if process.is_alive():
         # kill the process if it is still alive
         process.kill()
-        return timeout_message
+        return TIMEOUT_MESSAGE
     output = return_val[input_text]
     return output

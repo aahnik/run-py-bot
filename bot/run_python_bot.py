@@ -1,8 +1,10 @@
 '''
 This module makes the bot actually run
 '''
+import random
 
-from telegram.ext import CommandHandler, MessageHandler, Filters, Updater
+from telegram.ext import CommandHandler, MessageHandler, Filters, Updater, InlineQueryHandler
+from telegram import InlineQueryResultArticle, InputTextMessageContent
 # python-telegram-bot is a Pythonic Wrapper to the core Telegram API
 # it helps us to be DRY by giving us convinient wrapper functions to deal with Telegram API
 # you can install it by pip install python-telegram-bot --upgrade
@@ -87,7 +89,7 @@ def bot():
                 update.message.reply_text(
                     '''*No output. No error.*
                     \n> Try using a `print` statement.
-                    \n > To evaluate an expression use the /e command.''',
+                    \n> To evaluate an expression use the /e command.''',
                     quote=True, parse_mode='Markdown')
             else:
                 message = handle_long_message(returned_val)
@@ -108,6 +110,31 @@ def bot():
                 \nUse command /e before or after your expression like
                 \n/e `4 >= 5` \n \t or \n`4 >= 5` /e ''', quote=True, parse_mode='Markdown')
 
+    def inline_eval(update, context):
+        query = update.inline_query.query
+        if not query:
+            return
+        results = list()
+
+        output = title = eval_py(query)
+        max_len = 200
+        if len(output) > max_len:
+            output = output[:max_len]
+            title = f'click me to send upto {max_len} characters of result'
+
+        results.append(
+            InlineQueryResultArticle(
+                id=output[:8]+output[-8:],
+                title=title,
+                input_message_content=InputTextMessageContent(output)
+            )
+        )
+        # id: Unique identifier for this result, 1-64 Bytes.Type:str
+        # from https://python-telegram-bot.readthedocs.io/en/stable/telegram.inlinequeryresultarticle.html
+        # more on size of strings
+        # https://rushter.com/blog/python-strings-and-memory:~:text=4%20bytes%20per%20char%20(UCS%2D4%20encoding)
+        context.bot.answer_inline_query(update.inline_query.id, results)
+
     _handlers = {}
 
     _handlers['start_handler'] = CommandHandler('start', start)
@@ -116,6 +143,7 @@ def bot():
     _handlers['message_handler'] = MessageHandler(
         Filters.text & (~Filters.command), reply_execute)
     _handlers['eval_handler'] = CommandHandler('e', reply_eval)
+    _handlers['inline_eval_handler'] = InlineQueryHandler(inline_eval)
 
     for name, _handler in _handlers.items():
         print(f'Adding {name}')
