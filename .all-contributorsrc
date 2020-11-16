@@ -23,6 +23,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "SmartManoj",
+      "name": "மனோஜ்குமார் பழனிச்சாமி",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7231077?v=4",
+      "profile": "http://about.me/SmartManoj",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
