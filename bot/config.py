@@ -24,7 +24,7 @@ IMPORTS_MAP = {
     "imp-time-func": "from time import time",
     # difflib has a function aboout files but not this from
     "imp-sequencematcher-obj": "from difflib import SequenceMatcher",
-    "imp-get_close_matches-func": "from difflib import get_close_matches"  # the same for this
+    "imp-get_close_matches-func": "from difflib import get_close_matches",  # the same for this
     "imp-pprint": "import pprint",
     "imp-pprint-func": "from pprint import pprint",
     "imp-random": "import random",
