@@ -3,6 +3,7 @@ This module makes the bot actually run
 '''
 
 import logging
+from uuid import uuid4
 from telegram.ext import (CommandHandler,
                           MessageHandler,
                           Filters,
@@ -134,7 +135,7 @@ def bot():
 
         results.append(
             InlineQueryResultArticle(
-                id=output[:8]+output[-8:],
+                id=uuid4(),
                 title=title,
                 input_message_content=InputTextMessageContent(output)
             )
