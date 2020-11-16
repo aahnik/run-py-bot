@@ -5,7 +5,7 @@ import logging
 from subprocess import TimeoutExpired
 import subprocess
 import multiprocessing
-from .config import BANNED, TIMEOUT, TIMEOUT_MESSAGE, RESTRICT_MESSAGE
+from .config import BANNED, TIMEOUT, TIMEOUT_MESSAGE, RESTRICT_MESSAGE, IMP_TOKEN, IMPORTS_MAP
 
 
 def contains_restricted(input_text):
@@ -14,6 +14,22 @@ def contains_restricted(input_text):
         # block usage of this words for security and performance issues
         return True
     return False
+
+
+def preprocessor(input_text: str) -> str:
+    '''
+    this function is a preprocessor that replace lines according to IMP_MAP
+    if the string is not finded the line will remain the same,
+    this preprocessor has an intentional unflexible syntax and it not support spaces before
+    the token or after the string
+    '''
+    code_lines = input_text.splitlines()
+    ppdict_keys = IMPORTS_MAP.keys()
+    for i in range(len(code_lines)):
+        if IMP_TOKEN in code_lines[i][:len(IMP_TOKEN)]:
+            if code_lines[i][len(IMP_TOKEN):] in ppdict_keys:
+                code_lines[i] = IMPORTS_MAP[code_lines[i][len(IMP_TOKEN):]]
+    return "\n".join(code_lines)
 
 
 def run(update) -> str:
@@ -58,7 +74,7 @@ def run(update) -> str:
 
         if contains_restricted(input_text):
             return RESTRICT_MESSAGE
-        stdout, stderr = execute_py(input_text)
+        stdout, stderr = execute_py(preprocessor(input_text))
         if str(stdout) or str(stderr):
             out = f'{stdout} \n{stderr}'
             return out
