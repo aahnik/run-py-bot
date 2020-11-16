@@ -143,7 +143,7 @@ def bot():
         # from https://python-telegram-bot.readthedocs.io/en/stable/telegram.inlinequeryresultarticle.html
         # more on size of strings
         # https://rushter.com/blog/python-strings-and-memory:~:text=4%20bytes%20per%20char%20(UCS%2D4%20encoding)
-        context.bot.answer_inline_query(update.inline_query.id, results)
+        context.bot.answer_inline_query(update.inline_query.id, results,30)
 
     def unknown(update, context):
         update.message.reply_text(
