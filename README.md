@@ -72,19 +72,6 @@ All the logs will have the timestamp in the time-zone specified in the `start.py
 
 To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
 
-## Limitations 😑
-
-Currently, the bot is deployed on a Free Tier account of Python Anywhere.
-
-For security and performance reasons, you **cannot** do the following with the bot:
-
-- import any package
-- run the `input()` function
-- run the `open()` function
-- Execute a piece of code which takes longer than *6 seconds* to execute.
-
-You may overcome these limitations by changing the `config.py` file in the `bot` subdirectory and running the bot on your own server.
-
 ## Changelog 🔖
 
 See the [Releases](https://github.com/aahnik/run-py-bot/releases) tab for more info.
