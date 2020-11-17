@@ -4,7 +4,7 @@ import logging
 from datetime import datetime
 from pytz import timezone
 from bot import bot
-from bot.config import PROJECT_SUBDOMAIN, METHOD
+from bot.config import DOMAIN,PROJECT_SUBDOMAIN, METHOD
 
 
 TIMEZONE = 'Asia/Kolkata'
@@ -20,6 +20,7 @@ logger.setLevel(logging.INFO)
 
 if __name__ == "__main__":
     if METHOD == 'webhook':
+        assert DOMAIN
         assert PROJECT_SUBDOMAIN
         bot.webhook()
     elif METHOD == 'polling':

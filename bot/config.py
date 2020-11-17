@@ -19,10 +19,10 @@ with open('messages/code.txt') as f:
     CODE_INFO = f.read()
 
 PROJECT_SUBDOMAIN = os.getenv('APP_NAME')
-
+DOMAIN = os.getenv('DOMAIN')
 
 # webhook settings
-WEBHOOK_HOST = f'https://{PROJECT_SUBDOMAIN}.herokuapp.com'
+WEBHOOK_HOST = f'https://{PROJECT_SUBDOMAIN}.{DOMAIN}.com'
 WEBHOOK_PATH = '/webhook/' + BOT_API_TOKEN[::-1]
 WEBHOOK_URL = urljoin(WEBHOOK_HOST, WEBHOOK_PATH)
 
