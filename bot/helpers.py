@@ -4,7 +4,7 @@ import logging
 
 
 def check_length(text: str) -> str:
-    ''' Telegram does not allow messages over 4096 characters. 
+    ''' Telegram does not allow messages over 4096 characters.
     Long messages don't look good. This function will truncate long messages.
 
     Args:
@@ -19,12 +19,12 @@ def check_length(text: str) -> str:
         return 'This should not happen'
     if len(text) > 1000:
         return text[:1000] + '\n... truncated <too long message>'
-    else:
-        return text
+    return text
 
 
 def parse_response(resp: dict) -> dict:
-    ''' Parses the response dictionary obtained after running code, and makes a beautified string out of it.
+    ''' Parses the response dictionary obtained after running code,
+    and makes a beautified string out of it.
 
     Args:
         resp (dict): the dictionary returned by run_python_rextester.
@@ -36,14 +36,21 @@ def parse_response(resp: dict) -> dict:
     output = {'message': '', 'stats': ''}
     try:
         if resp['Errors'] == 'Too many requests...':
-            output['message'] = 'Try after some time. I may block you if you send too many messages at a very short interval. If you think you are innocent, please contact @AahnikDaw'
+            output['message'] = '''Try after some time.
+            \nI may block you if you send too many messages at a very short interval. 
+            \nIf you think you are innocent, please contact @AahnikDaw'''
             output['stats'] = 'No information availaible'
         else:
-            output['message'] = f'''{check_length(resp['Result'])  if resp['Result'] else 'No result' }
-                        \n{check_length(resp['Errors'])  if resp['Errors'] else ''}
-                        \n{check_length(resp['Warnings'])  if resp['Warnings'] else ''}'''.strip('\n')
+            output['message'] = f'''\
+                {check_length(resp['Result'])  if resp['Result'] else 'No result' }
+                \n{check_length(resp['Errors'])  if resp['Errors'] else ''}
+                \n{check_length(resp['Warnings'])  if resp['Warnings'] else ''}'''\
+                .strip('\n')
+
             output['stats'] = resp['Stats']
+
         return output
+
     except Exception as err:
         logging.warning(err)
         return None

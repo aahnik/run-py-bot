@@ -2,12 +2,25 @@
 '''
 
 import logging
-import aiohttp
 import asyncio
+import aiohttp
 
 
 async def run_python_rextester(code):
-    ''' Asynchronous function to run a code using the rextester api and returns the result dictionary.
+    ''' Asynchronous function to run a code using the rextester api
+    and returns the promise of result dictionary.
+
+    Args:
+        code (str) : the code to be executed
+
+    Returns:
+        promise: a dictionary with keys
+            Result = Output of a program
+            Warnings = Warnings, if any, as one string
+            Errors = Errors, if any, as one string
+            Stats = Execution stats as one string
+            Files = files
+
     '''
 
     if '\n' not in code:
@@ -22,24 +35,21 @@ async def run_python_rextester(code):
 
     async with aiohttp.ClientSession() as session:
         async with session.post(url=base, data=payload) as response:
-
             return await response.json()
 
-            '''returns dictionary with keys
-            Result=Output of a program 
-            Warnings=Warnings, if any, as one string
-            Errors=Errors, if any, as one string
-            Stats=Execution stats as one string
-            Files=files
-            '''
 
+async def main(times: int):
+    ''' Runner for run_python_rextester
 
-async def main(n):
-    tasks = [run_python_rextester('print("ok")') for i in range(n)]
+    Args:
+        times (int): how many times to be run
+    '''
+
+    tasks = [run_python_rextester('print("ok")') for i in range(times)]
     await asyncio.gather(*tasks)
 
 if __name__ == "__main__":
-    ''' Testing the run_python_rextester '''
+    # Testing the run_python_rextester
 
     logging.basicConfig(level=logging.DEBUG)
-    asyncio.run(main(n=10))
+    asyncio.run(main(times=10))

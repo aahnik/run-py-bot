@@ -1,7 +1,10 @@
-from bot import bot
+''' This module will setup logging in desired timezone and start the bot. '''
+
 import logging
-from pytz import timezone
 from datetime import datetime
+from pytz import timezone
+from bot import bot
+
 
 TIMEZONE = 'Asia/Kolkata'
 

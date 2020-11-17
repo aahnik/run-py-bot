@@ -1,4 +1,4 @@
-''' This module uses aiogram to make the telegram bot. 
+''' This module uses aiogram to make the telegram bot.
 The various commands and messages sent to the bot are handled by this script
 '''
 
@@ -38,21 +38,21 @@ async def start(message: types.Message):
 
 
 @dp.message_handler(commands=['help'])
-async def help(message: types.Message):
+async def bot_help(message: types.Message):
     ''' This handles the help command. '''
 
     await message.reply(HELP_MESSAGE, parse_mode='Markdown')
 
 
 @dp.message_handler(commands=['code'])
-async def help(message: types.Message):
+async def code(message: types.Message):
     ''' This handles the code command. '''
 
     await message.reply(CODE_INFO, parse_mode='Markdown')
 
 
 @dp.message_handler(commands=['e'])
-async def e(message: types.Message):
+async def deprecated(message: types.Message):
     ''' This handles the e command which has been deprecated. '''
 
     await message.reply('''Usage of /e has been deprecated since v0.1.0.
@@ -60,7 +60,7 @@ async def e(message: types.Message):
 
 
 @dp.message_handler(text=['hi', 'hello', 'Hi', 'Hello'])
-async def hi(message: types.Message):
+async def sweet(message: types.Message):
     ''' When the user says hi or hello, the bot gives a sweet reply. '''
 
     user = message.from_user.full_name
@@ -96,12 +96,13 @@ async def inline_echo(inline_query: InlineQuery):
     items = [InlineQueryResultArticle(
         id=result_id,
         title=title,
-        input_message_content=InputTextMessageContent(content)) for result_id, title, content in results(text)]
+        input_message_content=InputTextMessageContent(content))
+        for result_id, title, content in results(text)]
     if __name__ == '__main__':
-        ct = 1
+        cache_time = 1
     else:
-        ct = 300
-    await bot.answer_inline_query(inline_query.id, results=items, cache_time=ct)
+        cache_time = 300
+    await bot.answer_inline_query(inline_query.id, results=items, cache_time=cache_time)
 
 
 def main():
@@ -111,7 +112,7 @@ def main():
 
 
 if __name__ == '__main__':
-    ''' This module will be run directly while testing the bot locally. '''
+    # This module will be run directly while testing the bot locally.
 
     logging.basicConfig(
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
