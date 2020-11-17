@@ -16,7 +16,7 @@ async def run_python_rextester(code):
     base = 'https://rextester.com/rundotnet/api'
 
     payload = {
-        'LanguageChoice': '5',  # for python
+        'LanguageChoice': '24',  # for python3
         'Program': code
     }
 
