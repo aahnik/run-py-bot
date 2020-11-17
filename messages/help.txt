@@ -1,0 +1,9 @@
+Every message is executed freshly.
+
+Single line python expressions are automatically surrounded by eval and the result is printed.
+
+If you are writing a multiline message, you must use the print statement to print something.
+
+To get information about source code send /code.
+
+*Play around with me to explore more* 😍

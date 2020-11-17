@@ -1,4 +1,4 @@
-from bot import run_python_bot
+from bot import bot
 import logging
 from pytz import timezone
 from datetime import datetime
@@ -12,6 +12,6 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO, datefmt='%d/%m/%Y %I:%M:%S %p')
 
 logger = logging.getLogger()
-logger.setLevel(20)
+logger.setLevel(logging.INFO)
 
-run_python_bot.bot()
+bot.main()
