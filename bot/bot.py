@@ -5,29 +5,21 @@ The various commands and messages sent to the bot are handled by this script
 import logging
 
 from aiogram import (Bot, Dispatcher, executor, types)
-from aiogram.types import (InlineQuery,
-                           InputTextMessageContent,
-                           InlineQueryResultArticle)
+from aiogram.types import (InlineQuery, InlineQueryResultArticle,
+                           InputTextMessageContent)
+from aiogram.contrib.middlewares.logging import LoggingMiddleware
+from aiogram.utils.executor import start_webhook
 
 from .rextester import run_python_rextester
 from .helpers import parse_response, results
-
-with open('token.txt') as f:
-    API_TOKEN = f.readline().strip()
-
-with open('messages/start.txt') as f:
-    START_MESSAGE = f.read()
-
-with open('messages/help.txt') as f:
-    HELP_MESSAGE = f.read()
-
-with open('messages/code.txt') as f:
-    CODE_INFO = f.read()
+from .config import (WEBAPP_HOST, WEBAPP_PORT, WEBHOOK_URL, WEBHOOK_PATH,
+                     BOT_API_TOKEN, START_MESSAGE, HELP_MESSAGE, CODE_INFO)
 
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=BOT_API_TOKEN)
 
 dp = Dispatcher(bot)
+dp.middleware.setup(LoggingMiddleware())
 
 
 @dp.message_handler(commands=['start'])
@@ -105,10 +97,44 @@ async def inline_echo(inline_query: InlineQuery):
     await bot.answer_inline_query(inline_query.id, results=items, cache_time=cache_time)
 
 
-def main():
+async def on_startup(dp: Dispatcher):
+    ''' Code to run when webhook starts.
+
+    Args:
+        dp (Dispatcher): dispatcher object
+    '''
+
+    await bot.set_webhook(WEBHOOK_URL)
+
+
+async def on_shutdown(dp: Dispatcher):
+    ''' Code to run when webhook is shutdown.
+
+    Args:
+        dp (Dispatcher): [description]
+    '''
+
+    logging.warning('Shutting down webhook')
+    await bot.delete_webhook()
+
+
+def poll():
     ''' The bot is started by the main method. '''
 
     executor.start_polling(dp, skip_updates=True)
+
+
+def webhook():
+    ''' Webhook connection. '''
+    start_webhook(
+        dispatcher=dp,
+        webhook_path=WEBHOOK_PATH,
+        on_startup=on_startup,
+        on_shutdown=on_shutdown,
+        skip_updates=True,
+        host=WEBAPP_HOST,
+        port=WEBAPP_PORT,
+    )
 
 
 if __name__ == '__main__':
@@ -121,4 +147,4 @@ if __name__ == '__main__':
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
 
-    main()
+    poll()
