@@ -13,7 +13,7 @@ from .rextester import run_python_rextester
 from .helpers import parse_response, results
 
 with open('token.txt') as f:
-    API_TOKEN = f.readline()
+    API_TOKEN = f.readline().strip()
 
 with open('messages/start.txt') as f:
     START_MESSAGE = f.read()
