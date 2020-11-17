@@ -37,7 +37,9 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 > If you are viewing from a smartphone, click on the gif to view full screen ...
 
-![runPython_bot](https://github.com/aahnik/run-py-bot/blob/main/docs/images/runPython_bot_gif.gif?raw=true)
+<p align="center">
+<img src="docs/images/run_python_bot_v0.1+.gif" alt="demo" >
+</p>
 
 ## Deploy ⚡
 
