@@ -10,8 +10,9 @@ Run python code from your telegram chat!
 [![Maintenance Yes](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/aahnik/REPO/graphs/commit-activity)
 [![telegram-chat](https://img.shields.io/badge/chat-@aahnikdaw-blue?logo=telegram)](https://telegram.me/aahnikdaw)
 [![telegram-bot](https://img.shields.io/badge/bot-@runPython_bot-orange?logo=telegram)](https://telegram.me/runPython_bot)
+[![badge-youtube](https://img.shields.io/youtube/views/nCuQ-7Rw0gM?style=social)](https://youtu.be/nCuQ-7Rw0gM)
 
-![RunPythonBot](https://github.com/aahnik/run-py-bot/blob/main/docs/images/runPython_bot.png?raw=true)
+![RunPythonBot](docs/images/Chatting%20with%20Python.png)
 
 <!-- A simple bot that runs python code. Free and Open Source. For more info visit http://bit.ly/runPython -->
 
@@ -28,7 +29,7 @@ You may check whether the bot is alive or not, by clicking on the start command.
 2. Tweet by [The Python Dev](https://twitter.com/The_Python_DEV/status/1325237102058016768)
 3. Dor Moshe's [Newsletter](https://dormoshe.io/newsletters/ag/python/7?utm_source=twitter&utm_campaign=twitter)
 4. My YouTube Video [Chatting with Python](https://youtu.be/nCuQ-7Rw0gM)
-[![badge-youtube](https://img.shields.io/youtube/views/nCuQ-7Rw0gM?style=social)](https://youtu.be/nCuQ-7Rw0gM)
+
 
 ## Example Use 🔀
 
