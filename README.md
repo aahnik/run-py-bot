@@ -41,7 +41,7 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 <img src="docs/images/run_python_bot_v0.1+.gif" alt="demo" >
 </p>
 
-## Deploy ⚡
+<!-- ## Deploy ⚡
 
 You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following some simple steps.
 
@@ -78,7 +78,7 @@ All the logs will have the timestamp in the time-zone specified in the `start.py
 
 To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
 
-</details>
+</details> -->
 
 ## Changelog 🔖
 
