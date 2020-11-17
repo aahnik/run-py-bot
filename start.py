@@ -17,4 +17,5 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-bot.main()
+if __name__ == "__main__":
+    bot.webhook()

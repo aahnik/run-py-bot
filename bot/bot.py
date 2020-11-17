@@ -126,6 +126,7 @@ def poll():
 
 def webhook():
     ''' Webhook connection. '''
+    
     start_webhook(
         dispatcher=dp,
         webhook_path=WEBHOOK_PATH,
