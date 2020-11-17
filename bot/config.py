@@ -21,9 +21,12 @@ with open('messages/code.txt') as f:
 PROJECT_SUBDOMAIN = os.getenv('APP_NAME')
 assert PROJECT_SUBDOMAIN
 
-WEBAPP_HOST = f'https://{PROJECT_SUBDOMAIN}.herokuapp.com/'
+# webhook settings
+WEBHOOK_HOST = f'https://{PROJECT_SUBDOMAIN}.herokuapp.com/'
 WEBHOOK_PATH = '/webhook/' + BOT_API_TOKEN[::-1]
+WEBHOOK_URL = urljoin(WEBHOOK_HOST, WEBHOOK_PATH)
 
-WEBHOOK_URL = urljoin(WEBAPP_HOST, WEBHOOK_PATH)
 
+# webapp settings
+WEBAPP_HOST = 'localhost'
 WEBAPP_PORT = os.getenv('PORT')
