@@ -59,7 +59,7 @@ async def e(message: types.Message):
                 \nAny one-line message is by default passed to the eval function''')
 
 
-@dp.message_handler(text=['hi', 'hello'])
+@dp.message_handler(text=['hi', 'hello', 'Hi', 'Hello'])
 async def hi(message: types.Message):
     ''' When the user says hi or hello, the bot gives a sweet reply. '''
 
@@ -71,8 +71,8 @@ async def hi(message: types.Message):
 async def run_code(message: types.Message):
     ''' Any normal text message except those handled by the above handlers, is executed as code .'''
 
-    if message.text:
-        inform = await message.reply('I recieved your code')
+    if not message.text.startswith('/'):
+        inform = await message.reply('I recieved your code ...')
 
         resp = await run_python_rextester(message.text.strip('\n'))
         output = parse_response(resp)
@@ -85,7 +85,7 @@ async def run_code(message: types.Message):
         await inform.delete()
 
     else:
-        await message.reply('This should not happen')
+        await message.reply('I could not understand that command. 😢')
 
 
 @dp.inline_handler()
@@ -106,7 +106,7 @@ async def inline_echo(inline_query: InlineQuery):
 
 def main():
     ''' The bot is started by the main method. '''
-    
+
     executor.start_polling(dp, skip_updates=True)
 
 
