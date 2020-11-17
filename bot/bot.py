@@ -51,12 +51,12 @@ async def help(message: types.Message):
     await message.reply(CODE_INFO, parse_mode='Markdown')
 
 
-@dp.message_handler(commands=['/e'])
+@dp.message_handler(commands=['e'])
 async def e(message: types.Message):
     ''' This handles the e command which has been deprecated. '''
 
-    await message.reply('''Usage of /e has been deprecated since v0.1.0
-                \nAny one-line message is by default passed to the eval function''')
+    await message.reply('''Usage of /e has been deprecated since v0.1.0.
+                \nAny one-line message is by default passed to the eval function.''')
 
 
 @dp.message_handler(text=['hi', 'hello', 'Hi', 'Hello'])
