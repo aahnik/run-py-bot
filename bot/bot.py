@@ -7,9 +7,8 @@ import logging
 from aiogram import (Bot, Dispatcher, executor, types)
 from aiogram.types import (InlineQuery, InlineQueryResultArticle,
                            InputTextMessageContent)
-from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.utils.executor import start_webhook
-from aiogram.dispatcher.webhook import SendMessage
+# from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
 from .rextester import run_python_rextester
 from .helpers import parse_response, results
@@ -21,14 +20,13 @@ from .config import (WEBHOOK_PATH, WEBHOOK_URL,
 bot = Bot(token=BOT_API_TOKEN)
 
 dp = Dispatcher(bot)
-dp.middleware.setup(LoggingMiddleware())
+# dp.middleware.setup(LoggingMiddleware())
 
 
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     ''' This handles the start command. '''
-    
-    return SendMessage(message.chat.id, message.text)
+
     await message.reply(START_MESSAGE, parse_mode='Markdown')
 
 
@@ -141,16 +139,3 @@ def webhook():
         host=WEBAPP_HOST,
         port=WEBAPP_PORT,
     )
-
-
-if __name__ == '__main__':
-    # This module will be run directly while testing the bot locally.
-
-    logging.basicConfig(
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        level=logging.INFO, datefmt='%d/%m/%Y %I:%M:%S %p')
-
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-
-    poll()
