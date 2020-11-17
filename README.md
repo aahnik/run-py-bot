@@ -12,8 +12,9 @@ Run python code from your telegram chat!
 [![telegram-bot](https://img.shields.io/badge/bot-@runPython_bot-orange?logo=telegram)](https://telegram.me/runPython_bot)
 [![badge-youtube](https://img.shields.io/youtube/views/nCuQ-7Rw0gM?style=social)](https://youtu.be/nCuQ-7Rw0gM)
 
-![RunPythonBot](docs/images/Chatting%20with%20Python.png)
-
+<p align="center">
+<img src="docs/images/Chatting%20with%20Python.png" alt="thumbnail" width=600px>
+</p>
 <!-- A simple bot that runs python code. Free and Open Source. For more info visit http://bit.ly/runPython -->
 
 ## Find on Telegram 🔎
@@ -30,7 +31,6 @@ You may check whether the bot is alive or not, by clicking on the start command.
 3. Dor Moshe's [Newsletter](https://dormoshe.io/newsletters/ag/python/7?utm_source=twitter&utm_campaign=twitter)
 4. My YouTube Video [Chatting with Python](https://youtu.be/nCuQ-7Rw0gM)
 
-
 ## Example Use 🔀
 
 You may use pythonic expressions to easily calculate any complex problem. Or you may test your algorithms on the go.
@@ -41,13 +41,11 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 ## Deploy ⚡
 
+You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following some simple steps.
+
 <details>
 
   <summary>👉 Click to see detailed instructions</summary>
-
-You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following the below steps:
-
-> Note: While pasting on your machine terminal you should use `Ctrl+Shift+V` but make sure to use `Ctrl+V` to paste in the Python Anywhere bash console from the browser.
 
 Create a free Python Anywhere account and open a Bash Console, which has everything pre-loaded.
 
@@ -55,6 +53,8 @@ If you are planning to deploy on your **own machine**, make sure to have `Python
 
 The following instructions will work smoothly on *Linux* and *Mac*. If you are on Windows, you may have to make slight modifications. Google is your best friend here.
 
+> Note: While pasting on your machine terminal you should use `Ctrl+Shift+V` but make sure to use `Ctrl+V` to paste in the Python Anywhere bash console from the browser.
+> 
 - Clone this repository and move into it.
 
       git clone https://github.com/aahnik/run-py-bot.git && cd run-py-bot
