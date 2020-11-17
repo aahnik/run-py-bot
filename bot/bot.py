@@ -9,6 +9,7 @@ from aiogram.types import (InlineQuery, InlineQueryResultArticle,
                            InputTextMessageContent)
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.utils.executor import start_webhook
+from aiogram.dispatcher.webhook import SendMessage
 
 from .rextester import run_python_rextester
 from .helpers import parse_response, results
@@ -26,7 +27,8 @@ dp.middleware.setup(LoggingMiddleware())
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     ''' This handles the start command. '''
-
+    
+    return SendMessage(message.chat.id, message.text)
     await message.reply(START_MESSAGE, parse_mode='Markdown')
 
 
@@ -105,6 +107,8 @@ async def on_startup(dp: Dispatcher):
         dp (Dispatcher): dispatcher object
     '''
 
+    await bot.delete_webhook()
+    logging.warning('Setting up webhook')
     await bot.set_webhook(WEBHOOK_URL)
 
 
