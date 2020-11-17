@@ -43,6 +43,9 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 <!-- ## Deploy ⚡
 
+
+BOT_API_TOKEN 
+PROJECT_SUBDOMAIN
 You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following some simple steps.
 
 <details>

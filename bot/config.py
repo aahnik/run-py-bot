@@ -7,6 +7,8 @@ try:
 except:
     BOT_API_TOKEN = os.getenv('BOT_API_TOKEN')
 
+assert BOT_API_TOKEN
+
 with open('messages/start.txt') as f:
     START_MESSAGE = f.read()
 
@@ -16,7 +18,8 @@ with open('messages/help.txt') as f:
 with open('messages/code.txt') as f:
     CODE_INFO = f.read()
 
-PROJECT_SUBDOMAIN = os.getenv('PROJECT_SUBDOMAIN')
+PROJECT_SUBDOMAIN = os.getenv('APP_NAME')
+assert PROJECT_SUBDOMAIN
 
 WEBAPP_HOST = f'https://{PROJECT_SUBDOMAIN}.herokuapp.com/'
 WEBHOOK_PATH = '/webhook/' + BOT_API_TOKEN[::-1]
