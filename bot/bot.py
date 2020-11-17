@@ -55,7 +55,7 @@ async def code(message: types.Message):
 async def deprecated(message: types.Message):
     ''' This handles the e command which has been deprecated. '''
 
-    await message.reply('''Usage of /e has been deprecated since v0.1.0.
+    await message.reply('''Usage of /e has been deprecated.
                 \nAny one-line message is by default passed to the eval function.''')
 
 
