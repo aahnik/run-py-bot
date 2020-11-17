@@ -41,6 +41,10 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 ## Deploy ⚡
 
+<details>
+
+  <summary>👉 Click to see detailed instructions</summary>
+
 You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following the below steps:
 
 > Note: While pasting on your machine terminal you should use `Ctrl+Shift+V` but make sure to use `Ctrl+V` to paste in the Python Anywhere bash console from the browser.
@@ -71,6 +75,8 @@ Your bot is now up and running, Enjoy ! 😊
 All the logs will have the timestamp in the time-zone specified in the `start.py` file.
 
 To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
+
+</details>
 
 ## Changelog 🔖
 
