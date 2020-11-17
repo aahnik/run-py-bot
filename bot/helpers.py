@@ -60,7 +60,7 @@ def results(text: str) -> list:
     '''
 
     result_list = [
-        ('1', 'YouTube', ''),
+        ('1', 'YouTube', 'https://www.youtube.com/watch?v=nCuQ-7Rw0gM'),
         ('2', 'Dev Community',
          'https://dev.to/aahnik/start-chatting-with-python-on-telegram-29ci'),
         ('3', 'GitHub', 'https://github.com/aahnik/run-py-bot')
