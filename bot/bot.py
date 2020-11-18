@@ -8,7 +8,7 @@ from aiogram import (Bot, Dispatcher, executor, types)
 from aiogram.types import (InlineQuery, InlineQueryResultArticle,
                            InputTextMessageContent)
 from aiogram.utils.executor import start_webhook
-# from aiogram.contrib.middlewares.logging import LoggingMiddleware
+from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
 from .rextester import run_python_rextester
 from .helpers import parse_response, results
@@ -20,7 +20,7 @@ from .config import (WEBHOOK_PATH, WEBHOOK_URL,
 bot = Bot(token=BOT_API_TOKEN)
 
 dp = Dispatcher(bot)
-# dp.middleware.setup(LoggingMiddleware())
+dp.middleware.setup(LoggingMiddleware())
 
 
 @dp.message_handler(commands=['start'])
@@ -136,6 +136,6 @@ def webhook():
         on_startup=on_startup,
         on_shutdown=on_shutdown,
         skip_updates=True,
-        host='0.0.0.0',
-        port=8443,
+        host=WEBAPP_HOST,
+        port=WEBAPP_PORT,
     )

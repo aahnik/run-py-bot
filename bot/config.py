@@ -28,8 +28,9 @@ WEBHOOK_URL = urljoin(WEBHOOK_HOST, WEBHOOK_PATH)
 
 
 # webapp settings
-WEBAPP_HOST = 'localhost'
-WEBAPP_PORT = os.getenv('PORT')
+WEBAPP_HOST = '*'
+# WEBAPP_PORT = os.getenv('PORT')
+WEBAPP_PORT = 8443
 
 # way to run
 METHOD = os.getenv('METHOD', 'polling')
