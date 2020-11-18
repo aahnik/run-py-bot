@@ -41,48 +41,6 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 <img src="docs/images/run_python_bot_v0.1+.gif" alt="demo" >
 </p>
 
-<!-- ## Deploy ⚡
-
-
-BOT_API_TOKEN 
-PROJECT_SUBDOMAIN
-You can easily *deploy this bot* on [Python Anywhere](https://www.pythonanywhere.com/) or your **local machine** by following some simple steps.
-
-<details>
-
-  <summary>👉 Click to see detailed instructions</summary>
-
-Create a free Python Anywhere account and open a Bash Console, which has everything pre-loaded.
-
-If you are planning to deploy on your **own machine**, make sure to have `Python3+`, `pip`.
-
-The following instructions will work smoothly on *Linux* and *Mac*. If you are on Windows, you may have to make slight modifications. Google is your best friend here.
-
-> Note: While pasting on your machine terminal you should use `Ctrl+Shift+V` but make sure to use `Ctrl+V` to paste in the Python Anywhere bash console from the browser.
-> 
-- Clone this repository and move into it.
-
-      git clone https://github.com/aahnik/run-py-bot.git && cd run-py-bot
-
-- Now add the token in the first line of `token.txt`.Run `cat > token.txt` -> Paste the token -> Press `Ctrl+D`
-
-- Create a virtual environment and install dependencies.
-
-      python3 -m venv venv && source venv/bin/activate
-      python3 -m pip install -r requirements.txt
-
-- Activate the bot by running `python3 start.py`
-
-- You may now close the Python Anywhere bash console window from your browser, but the bot will continue running.
-
-Your bot is now up and running, Enjoy ! 😊
-
-All the logs will have the timestamp in the time-zone specified in the `start.py` file.
-
-To stop the bot, press `Ctrl+C`. You may update the code running in your server by `git fetch && git pull`.
-
-</details> -->
-
 ## Changelog 🔖
 
 See the [Releases](https://github.com/aahnik/run-py-bot/releases) tab for more info.
