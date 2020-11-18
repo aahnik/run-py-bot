@@ -35,8 +35,6 @@ You may check whether the bot is alive or not, by clicking on the start command.
 
 You may use pythonic expressions to easily calculate any complex problem. Or you may test your algorithms on the go.
 
-> If you are viewing from a smartphone, click on the gif to view full screen ...
-
 <p align="center">
 <img src="docs/images/run_python_bot_v0.1+.gif" alt="demo" >
 </p>
