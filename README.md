@@ -49,7 +49,7 @@ Read the docstrings in the code for details. You will find lots of helpful links
 
 Some useful links:
 
-1. [How to deploy a telegram bot that fetched updates using webhooks to a cloud platform like Heroku](https://github.com/aahnik/webhook-aiogram-heroku)
+1. [How to deploy a telegram bot to Heroku](https://github.com/aahnik/webhook-aiogram-heroku)
 2. [Telegram Bot API Documentaion](https://core.telegram.org/bots/api)
 3. [Aiogram Examples](https://github.com/aiogram/aiogram/tree/dev-2.x/examples)
 4. [The Heroku Procfile](https://devcenter.heroku.com/articles/procfile)
