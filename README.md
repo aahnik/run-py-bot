@@ -49,12 +49,12 @@ Read the docstrings in the code for details. You will find lots of helpful links
 
 Some useful links:
 
-1. [How to deploy a telegram bot to Heroku](https://github.com/aahnik/webhook-aiogram-heroku)
+1. [How to deploy a telegram bot to Heroku](https://github.com/aahnik/webhook-aiogram-heroku#webhook-aiogram-heroku)
 2. [Telegram Bot API Documentaion](https://core.telegram.org/bots/api)
 3. [Aiogram Examples](https://github.com/aiogram/aiogram/tree/dev-2.x/examples)
 4. [The Heroku Procfile](https://devcenter.heroku.com/articles/procfile)
 5. [What are webhooks](https://www.youtube.com/results?search_query=webhooks)
-6. [How to use the Rextester API to run a piece of code](https://rextester.com/main)
+6. [How to use an API to run a piece of Python code](https://rextester.com/main)
 
 
 ## Contributors ✨
