@@ -8,5 +8,5 @@ logging.basicConfig(level=logging.INFO)
 
 
 if __name__ == "__main__":
-    bot = main.bot
+
     main.webhook()
