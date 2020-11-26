@@ -105,9 +105,8 @@ async def on_startup(dp: Dispatcher):
         dp (Dispatcher): dispatcher object
     '''
 
-    await bot.delete_webhook()
-    logging.warning('Setting up webhook')
-    await bot.set_webhook(WEBHOOK_URL)
+    logging.warning('Starting connection')
+
 
 
 async def on_shutdown(dp: Dispatcher):
@@ -117,8 +116,8 @@ async def on_shutdown(dp: Dispatcher):
         dp (Dispatcher): [description]
     '''
 
-    logging.warning('Shutting down webhook')
-    await bot.delete_webhook()
+    logging.warning('Ending connection')
+
 
 
 def poll():
