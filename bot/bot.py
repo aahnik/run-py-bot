@@ -14,10 +14,10 @@ from .rextester import run_python_rextester
 from .helpers import parse_response, results
 from .config import (WEBHOOK_PATH, WEBHOOK_URL,
                      WEBAPP_HOST, WEBAPP_PORT,
-                     BOT_API_TOKEN, START_MESSAGE, HELP_MESSAGE, CODE_INFO)
+                     API_TOKEN, START_MESSAGE, HELP_MESSAGE, CODE_INFO)
 
 
-bot = Bot(token=BOT_API_TOKEN)
+bot = Bot(token=API_TOKEN)
 
 dp = Dispatcher(bot)
 dp.middleware.setup(LoggingMiddleware())
