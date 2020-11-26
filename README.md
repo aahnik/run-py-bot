@@ -43,6 +43,20 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 
 See the [Releases](https://github.com/aahnik/run-py-bot/releases) tab for more info.
 
+## Develop
+
+Read the docstrings in the code for details. You will find lots of helpful links to stack overflow and documentation.
+
+Some useful links:
+
+1. [How to deploy a telegram bot that fetched updates using webhooks to a cloud platform like Heroku](https://github.com/aahnik/webhook-aiogram-heroku)
+2. [Telegram Bot API Documentaion](https://core.telegram.org/bots/api)
+3. [Aiogram Examples](https://github.com/aiogram/aiogram/tree/dev-2.x/examples)
+4. [The Heroku Procfile](https://devcenter.heroku.com/articles/procfile)
+5. [What are webhooks](https://www.youtube.com/results?search_query=webhooks)
+6. [How to use the Rextester API to run a piece of code](https://rextester.com/main)
+
+
 ## Contributors ✨
 
 Emojis assigned to each person, shows the type of contribution made by that person. See [emoji key](https://allcontributors.org/docs/en/emoji-key) to know more.
