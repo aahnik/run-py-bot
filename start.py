@@ -21,5 +21,5 @@ async def info():
     return str(info)
 
 if __name__ == "__main__":
-    app.run(host=config.WEBAPP_HOST, port=config.WEBAPP_PORT)
     main.webhook()
+    # app.run(host=config.WEBAPP_HOST, port=config.WEBAPP_PORT)
