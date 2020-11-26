@@ -118,6 +118,10 @@ async def on_shutdown(dp: Dispatcher):
     logging.warning('Ending connection')
 
 
+async def info():
+    return bot.get_webhook_info()
+
+
 def poll():
     ''' The bot is started by the main method. '''
 
