@@ -104,8 +104,8 @@ async def on_startup(dp: Dispatcher):
     Args:
         dp (Dispatcher): dispatcher object
     '''
-    await bot.set_webhook(WEBHOOK_URL)
-    logging.warning('Starting connection',drop_pending_updates=True)
+    await bot.set_webhook(WEBHOOK_URL,drop_pending_updates=True) # drop pending to prevent bot from responding twice to a message after waking
+    logging.warning('Starting connection')
 
 
 async def on_shutdown(dp: Dispatcher):
