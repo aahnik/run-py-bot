@@ -18,3 +18,4 @@ typing-extensions==3.7.4.3
 ujson==4.0.1
 uvloop==0.14.0
 yarl==1.6.3
+python-dotenv==0.17.0
