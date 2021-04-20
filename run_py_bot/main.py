@@ -12,9 +12,7 @@ from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
 from .rextester import run_python_rextester
 from .helpers import parse_response, results
-from .config import (WEBHOOK_PATH, WEBHOOK_URL,
-                     WEBAPP_HOST, WEBAPP_PORT,
-                     API_TOKEN, START_MESSAGE, HELP_MESSAGE, CODE_INFO)
+from .config import API_TOKEN, START_MESSAGE, HELP_MESSAGE, CODE_INFO
 
 
 bot = Bot(token=API_TOKEN)
@@ -104,6 +102,8 @@ async def on_startup(dp: Dispatcher):
     Args:
         dp (Dispatcher): dispatcher object
     '''
+    from run_py_bot.config import WEBHOOK_URL
+
     await bot.set_webhook(WEBHOOK_URL,drop_pending_updates=True) # drop pending to prevent bot from responding twice to a message after waking
     logging.warning('Starting connection')
 
@@ -130,7 +130,7 @@ def poll():
 
 def webhook():
     ''' Webhook connection. '''
-
+    from run_py_bot.config import WEBHOOK_PATH,WEBAPP_PORT,WEBAPP_HOST
     start_webhook(
         dispatcher=dp,
         webhook_path=WEBHOOK_PATH,
