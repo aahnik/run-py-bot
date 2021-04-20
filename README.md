@@ -1,9 +1,5 @@
 # run-py-bot
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 Run python code from your telegram chat!
 
 [![GitHub license](https://img.shields.io/github/license/aahnik/run-py-bot)](https://github.com/aahnik/run-py-bot/blob/main/LICENSE)
@@ -58,24 +54,4 @@ Some useful links:
 6. [How to use an API to run a piece of Python code](https://rextester.com/main)
 
 
-## Contributors ✨
-
-Emojis assigned to each person, shows the type of contribution made by that person. See [emoji key](https://allcontributors.org/docs/en/emoji-key) to know more.
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/gabrielesilinic"><img src="https://avatars0.githubusercontent.com/u/51238829?v=4" width="100px;" alt=""/><br /><sub><b>gabrielesilinic</b></sub></a><br /><a href="#security-gabrielesilinic" title="Security">🛡️</a> <a href="https://github.com/aahnik/run-py-bot/commits?author=gabrielesilinic" title="Code">💻</a></td>
-    <td align="center"><a href="http://aahnik.github.io"><img src="https://avatars0.githubusercontent.com/u/66209958?v=4" width="100px;" alt=""/><br /><sub><b>Aahnik Daw</b></sub></a><br /><a href="https://github.com/aahnik/run-py-bot/commits?author=aahnik" title="Code">💻</a> <a href="https://github.com/aahnik/run-py-bot/commits?author=aahnik" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://about.me/SmartManoj"><img src="https://avatars2.githubusercontent.com/u/7231077?v=4" width="100px;" alt=""/><br /><sub><b>மனோஜ்குமார் பழனிச்சாமி</b></sub></a><br /><a href="https://github.com/aahnik/run-py-bot/issues?q=author%3ASmartManoj" title="Bug reports">🐛</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-Contributions of any kind welcome! Please read [Contributing Guidelines](https://github.com/aahnik/run-py-bot/blob/main/.github/CONTRIBUTING.md) to get started.
 
