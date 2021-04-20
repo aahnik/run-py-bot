@@ -63,7 +63,7 @@ Open your terminal and follow the instructions to run the bot.
 - First of all, clone the repository and move into the `run-py-bot` directory.
 
     ```shell
-    git clone https://github.com/aahnik/howdoi-telegram.git && cd run-py-bot
+    git clone https://github.com/aahnik/run-py-bot.git && cd run-py-bot
     ```
 
 - Create a python virtual enviroment and activate it.
