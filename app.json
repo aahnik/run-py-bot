@@ -6,8 +6,13 @@
   "repository": "https://github.com/aahnik/run-py-bot",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png",
   "env": {
-    "BOT_TOKEN": {
+    "API_TOKEN": {
       "description": "Put your BOT token obtained from @BotFather",
+      "value": "",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Put your app name (the heroku app name that you have set)",
       "value": "",
       "required": true
     }
