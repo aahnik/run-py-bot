@@ -39,7 +39,7 @@ You may use pythonic expressions to easily calculate any complex problem. Or you
 <img src="docs/images/run_python_bot_v0.1+.gif" alt="demo" >
 </p>
 
-## How to run
+## How to run 🤖
 
 You can easily run your own instance of the bot.
 
@@ -95,7 +95,7 @@ Open your terminal and follow the instructions to run the bot.
     python start.py
     ```
 
-## Deploy to Heroku
+## Deploy to Heroku 🚀
 
 You can click this button to deploy to Heroku.
 
@@ -107,7 +107,7 @@ For more details [read the guide](https://github.com/aahnik/run-py-bot/issues/18
 
 See the [Releases](https://github.com/aahnik/run-py-bot/releases) tab for more info.
 
-## Contributing
+## Contributing ✨
 
 Issues and PRs welcome!
 
