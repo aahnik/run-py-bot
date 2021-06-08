@@ -10,19 +10,14 @@ Run python code from your telegram chat!
 
 <p align="center"><a href="https://github.com/aahnik/run-py-bot/blob/main/LICENSE"><img src="https://img.shields.io/github/license/aahnik/run-py-bot" alt="GitHub license"></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="made-with-python"></a>
-<a href="https://gitHub.com/aahnik/REPO/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance Yes"></a>
 <a href="https://telegram.me/aahnikdaw"><img src="https://img.shields.io/badge/chat-@aahnikdaw-blue?logo=telegram" alt="telegram-chat"></a>
-<a href="https://telegram.me/runPython_bot"><img src="https://img.shields.io/badge/bot-@runPython_bot-orange?logo=telegram" alt="telegram-bot"></a>
 <a href="https://youtu.be/nCuQ-7Rw0gM"><img src="https://img.shields.io/youtube/views/nCuQ-7Rw0gM?style=social" alt="badge-youtube"></a></p>
 
 
 
 <!-- A simple bot that runs python code. Free and Open Source. For more info visit http://bit.ly/runPython -->
 
-
-You can find this bot on Telegram as [@runPython_bot](https://telegram.me/runPython_bot).
-
-You may check whether the bot is alive or not, by clicking on the start command. If the bot responds, it is alive.
+> **UPDATE** I am no longer running this bot on my server. Please deploy your own instance to use.
 
 ## Featured in 😍
 
